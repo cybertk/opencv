@@ -4,6 +4,14 @@
       'target_name': 'opencv',
       'type': '<(component)',
 
+      'conditions': [
+        [ 'OS == "win"', {
+          'defines': [
+            'WIN32',
+          ],
+        }],
+      ],
+
       'sources': [
         'opencv/cv/src/cvaccum.cpp',
         'opencv/cv/src/cvadapthresh.cpp',
@@ -65,7 +73,7 @@
         'opencv/cv/src/cvthresh.cpp',
         'opencv/cv/src/cvundistort.cpp',
         'opencv/cv/src/cvutils.cpp',
-        'opencv/cv/src/dummy.cpp',
+        #'opencv/cv/src/dummy.cpp',
         'opencv/cxcore/src/cxalloc.cpp',
         'opencv/cxcore/src/cxarithm.cpp',
         'opencv/cxcore/src/cxarray.cpp',
@@ -96,8 +104,21 @@
         'opencv/cxcore/src/cxswitcher.cpp',
         'opencv/cxcore/src/cxtables.cpp',
         'opencv/cxcore/src/cxutils.cpp',
-        'opencv/cxcore/src/dummy.cpp',
-      ]
+        #'opencv/cxcore/src/dummy.cpp',
+      ],
+
+      'include_dirs': [
+        'opencv/cxcore/include',
+        'opencv/cv/include',
+      ],
+
+      'direct_dependent_settings': {
+        'include_dirs': [
+          'opencv/cxcore/include',
+          'opencv/cv/include',
+          'opencv/highgui/include',
+        ],
+      }
     },
   ]
 }
