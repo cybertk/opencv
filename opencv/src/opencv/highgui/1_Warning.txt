@@ -1,0 +1,3 @@
+
+BLOCKED FILE ALERTA file has been blocked due to the 'Intel Email File Filtering Policy' rule.Context: 'makeswig.sh'Disallowed due to Ticket Number: '6bcc-50d0-0d03-0001'
+See your system administrator for further information. Copyright 1999-2007 McAfee, Inc.All Rights Reserved.http://www.mcafee.com
