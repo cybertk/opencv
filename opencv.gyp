@@ -9,10 +9,28 @@
           'defines': [
             'WIN32',
           ],
+          # TODO(kyan): Remove, better design.
+          'type': 'none',
+          'link_settings': {
+            'libraries': [
+              'files/<(target_arch)/highgui.lib',
+            ]
+          },
+          'copies': [
+            {
+              'destination': '<(PRODUCT_DIR)',
+              'files': [
+                'files/<(target_arch)/highgui100.dll',
+                'files/<(target_arch)/libguide40.dll',
+                'files/<(target_arch)/cxcore100.dll',
+              ],
+            }
+          ],
         }],
       ],
 
-      'sources': [
+      # TODO(kyan): We use prebuilt version now.
+      '_sources': [
         'opencv/cv/src/cvaccum.cpp',
         'opencv/cv/src/cvadapthresh.cpp',
         'opencv/cv/src/cvapprox.cpp',
@@ -120,5 +138,6 @@
         ],
       }
     },
+
   ]
 }
