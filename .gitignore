@@ -1,0 +1,6 @@
+*.sln
+*.vcproj
+*.user
+
+Debug/
+Release/
