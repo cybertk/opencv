@@ -10,7 +10,6 @@
             'WIN32',
           ],
           # TODO(kyan): Remove, better design.
-          'type': 'none',
           'link_settings': {
             'libraries': [
               'files/<(target_arch)/highgui.lib',
@@ -30,7 +29,7 @@
       ],
 
       # TODO(kyan): We use prebuilt version now.
-      '_sources': [
+      'sources': [
         'opencv/cv/src/cvaccum.cpp',
         'opencv/cv/src/cvadapthresh.cpp',
         'opencv/cv/src/cvapprox.cpp',
