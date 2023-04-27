@@ -49,7 +49,7 @@ typedef int CVStatus;
 /* this part of CVStatus is compatible with IPLStatus 
   Some of below symbols are not [yet] used in OpenCV
 */
-#define CV_StsOk                    0  /* everithing is ok                */
+#define CV_StsOk                    0  /* everything is ok                */
 #define CV_StsBackTrace            -1  /* pseudo error for back trace     */
 #define CV_StsError                -2  /* unknown /unspecified error      */
 #define CV_StsInternal             -3  /* internal error (bad state)      */
